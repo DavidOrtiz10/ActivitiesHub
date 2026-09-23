@@ -1,5 +1,26 @@
+import { useEffect, useState } from "react";
+
 function App() {
-  return <h3>Events Hub</h3>;
+  const [activities, setActivities] = useState([]);
+
+  useEffect(() => {
+    fetch("https://localhost:5001/api/v1/events")
+      .then((response) => response.json())
+      .then((data) => setActivities(data));
+
+    return () => {};
+  }, []);
+
+  return (
+    <div>
+      <h3 style={{ color: "red" }}>Events Hub</h3>
+      <ul>
+        {activities.map((activity) => (
+          <li key={activity.id}>{activity.title}</li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
 export default App;
