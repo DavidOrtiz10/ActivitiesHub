@@ -1,78 +1,53 @@
-# React + TypeScript + Vite
+# EventsHub Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React frontend for EventsHub. It currently shows a single page that loads all events from the API and lists their titles.
 
-Currently, two official plugins are available:
+**Stack:** React 19, TypeScript 6, Vite 8, MUI 9 (Material UI + Emotion, Roboto font), axios. The React Compiler is enabled through a Babel preset.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Prerequisites
 
-## React Compiler
+- Node.js (developed with v24) and npm
+- [EventsHub.Api](../../src/EventsHub.Api/README.md) running on `https://localhost:5001`
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Install
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+Install dependencies in **both** folders. `axios` is declared in `web/package.json`, one level up, and resolves from `web/node_modules`:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```powershell
+cd web
+npm install
+cd EventsHub
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Run from `web/EventsHub`:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Command | What it does |
+|---|---|
+| `npm run dev` | Starts the Vite dev server on **https://localhost:3000** |
+| `npm run build` | Type-checks (`tsc -b`) and builds to `dist/` |
+| `npm run preview` | Serves the production build locally |
+| `npm run lint` | Runs ESLint (TypeScript, react-hooks and react-refresh rules) |
 
+The dev server uses `vite-plugin-mkcert` to create and trust a local HTTPS certificate. The first run may ask for permission to install the certificate authority.
+
+Port 3000 matters: the API's CORS policy only allows `http(s)://localhost:3000`.
+
+## How it talks to the API
+
+`src/App.tsx` requests `https://localhost:5001/api/v1/events` with axios in a `useEffect` and stores the result in component state. The URL is hard-coded; there is no environment variable or shared API client yet.
+
+The response type is `Activity`, declared in `src/lib/types/index.d.ts`. That file is a global ambient declaration, so `Activity` can be used without an import. It mirrors the backend `Event` entity with camelCase fields, with one difference: `latitude` and `longitude` are typed as `number` here, but the API sends them as strings.
+
+## Structure
+
+```
+src/
+  main.tsx              Entry point: StrictMode, global CSS, Roboto weights
+  App.tsx               Event list page
+  lib/types/index.d.ts  Global API types
+  index.css, App.css    Styles
+  assets/               Static images
 ```
