@@ -48,16 +48,16 @@ flowchart LR
 
 Solid arrows between .NET projects are project references. The Api reaches `Persistence` and `Domain` only transitively through `Application`.
 
-| Component | Role | README |
-|---|---|---|
-| `src/EventsHub.Domain` | Entity classes (`Event`) | [README](../src/EventsHub.Domain/README.md) |
-| `src/EventsHub.Persistence` | `AppDbContext`, migrations, seed data | [README](../src/EventsHub.Persistence/README.md) |
-| `src/EventsHub.Application` | Reserved for application logic; currently has no code | — |
-| `src/EventsHub.Api` | HTTP API, startup, CORS | [README](../src/EventsHub.Api/README.md) |
-| `src/EventsHub.OpenApi` (+ `src/nswag`, `src/openapi`) | OpenAPI document and C# client generation | [README](../src/EventsHub.OpenApi/README.md) |
-| `web/EventsHub` | React frontend | [README](../web/EventsHub/README.md) |
-| `tests/EventsHub.UnitTests` | NUnit tests for controllers | [README](../tests/EventsHub.UnitTests/README.md) |
-| `tests/EventsHub.IntegrationTests` | Bruno HTTP collection | [README](../tests/EventsHub.IntegrationTests/README.md) |
+| Component                                              | Role                                                  | README                                                  |
+| ------------------------------------------------------ | ----------------------------------------------------- | ------------------------------------------------------- |
+| `src/EventsHub.Domain`                                 | Entity classes (`Event`)                              | [README](../src/EventsHub.Domain/README.md)             |
+| `src/EventsHub.Persistence`                            | `AppDbContext`, migrations, seed data                 | [README](../src/EventsHub.Persistence/README.md)        |
+| `src/EventsHub.Application`                            | Reserved for application logic; currently has no code | —                                                       |
+| `src/EventsHub.Api`                                    | HTTP API, startup, CORS                               | [README](../src/EventsHub.Api/README.md)                |
+| `src/EventsHub.OpenApi` (+ `src/nswag`, `src/openapi`) | OpenAPI document and C# client generation             | [README](../src/EventsHub.OpenApi/README.md)            |
+| `web/EventsHub`                                        | React frontend                                        | [README](../web/EventsHub/README.md)                    |
+| `tests/EventsHub.UnitTests`                            | NUnit tests for controllers                           | [README](../tests/EventsHub.UnitTests/README.md)        |
+| `tests/EventsHub.IntegrationTests`                     | Bruno HTTP collection                                 | [README](../tests/EventsHub.IntegrationTests/README.md) |
 
 ## 3. Request flow: loading the event list
 
