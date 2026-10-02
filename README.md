@@ -42,7 +42,7 @@ dotnet test EventsHub.slnx
 | `src/EventsHub.Api` | REST API ([README](src/EventsHub.Api/README.md)) |
 | `src/EventsHub.Domain` | Entities ([README](src/EventsHub.Domain/README.md)) |
 | `src/EventsHub.Persistence` | EF Core context, migrations, seed data ([README](src/EventsHub.Persistence/README.md)) |
-| `src/EventsHub.Application` | Reserved application layer (currently empty) |
+| `src/EventsHub.Application` | Reserved application layer, currently empty ([README](src/EventsHub.Application/README.md)) |
 | `src/EventsHub.OpenApi`, `src/nswag`, `src/openapi` | OpenAPI document and C# client generation ([README](src/EventsHub.OpenApi/README.md)) |
 | `web/EventsHub` | React frontend ([README](web/EventsHub/README.md)) |
 | `tests/EventsHub.UnitTests` | NUnit tests ([README](tests/EventsHub.UnitTests/README.md)) |

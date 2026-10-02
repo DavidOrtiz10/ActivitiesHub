@@ -52,7 +52,7 @@ Solid arrows between .NET projects are project references. The Api reaches `Pers
 | ------------------------------------------------------ | ----------------------------------------------------- | ------------------------------------------------------- |
 | `src/EventsHub.Domain`                                 | Entity classes (`Event`)                              | [README](../src/EventsHub.Domain/README.md)             |
 | `src/EventsHub.Persistence`                            | `AppDbContext`, migrations, seed data                 | [README](../src/EventsHub.Persistence/README.md)        |
-| `src/EventsHub.Application`                            | Reserved for application logic; currently has no code | —                                                       |
+| `src/EventsHub.Application`                            | Reserved for application logic; currently has no code | [README](../src/EventsHub.Application/README.md)        |
 | `src/EventsHub.Api`                                    | HTTP API, startup, CORS                               | [README](../src/EventsHub.Api/README.md)                |
 | `src/EventsHub.OpenApi` (+ `src/nswag`, `src/openapi`) | OpenAPI document and C# client generation             | [README](../src/EventsHub.OpenApi/README.md)            |
 | `web/EventsHub`                                        | React frontend                                        | [README](../web/EventsHub/README.md)                    |
