@@ -6,17 +6,17 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EventsHub.Api.Controllers;
 
-public class EventsController(IMediator mediator) : EventsHubBaseController
+public class EventsController : EventsHubBaseController
 {
     [HttpGet]
     public async Task<ActionResult<IReadOnlyList<Event>>> GetEventsAsync()
     {
-        return await mediator.Send(new GetEventsList.Query());
+        return await Mediator.Send(new GetEventsList.Query());
     }
 
     [HttpGet("{id}")]
     public async Task<ActionResult<Event>> GetEventDetailAsync(string id)
     {
-        return await mediator.Send(new GetEventQueries.Query { Id = id });
+        return await Mediator.Send(new GetEventQueries.Query { Id = id });
     }
 }
