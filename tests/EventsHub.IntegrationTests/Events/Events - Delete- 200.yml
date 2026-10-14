@@ -1,0 +1,33 @@
+info:
+  name: Events - Delete- 200
+  type: http
+  seq: 6
+
+http:
+  method: DELETE
+  url: "{{baseUrl}}/Events/:eventid"
+  params:
+    - name: eventid
+      value: 01ef5ae3-cdb2-4f23-886d-e6be316208f4
+      type: path
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: tests
+      code: |-
+        test("Status code is 404 Not Found",function(){
+          expect(res.getStatus()).to.equal(404);
+        });
+
+        test("Response return an array",function(){
+          const body = res.getBody();
+          expect(body).to.equal("The event was not found");
+        });
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
