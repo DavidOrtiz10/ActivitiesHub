@@ -1,4 +1,3 @@
-using AutoMapper;
 using EventsHub.Domain;
 
 namespace EventsHub.Application.Core

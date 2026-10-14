@@ -48,10 +48,10 @@
     "semantic_hash": "5c35f77b673784c2439cff159b77b97c"
   },
   "src/EventsHub.Api/Program.cs": {
-    "mtime": 1791951440.1644993,
-    "seen": 1791986168.8980997,
-    "ast_hash": "bbff5487dfa3a77a41f97d91ea19470a",
-    "semantic_hash": "bbff5487dfa3a77a41f97d91ea19470a"
+    "mtime": 1791998766.0781214,
+    "seen": 1791998918.5035625,
+    "ast_hash": "a20786c884f133ea172a21b260b29516",
+    "semantic_hash": ""
   },
   "src/EventsHub.Api/Properties/launchSettings.json": {
     "mtime": 1790106960.7358692,
@@ -78,16 +78,16 @@
     "semantic_hash": "4fe26a6c717e77372db05a34aad9ed75"
   },
   "src/EventsHub.Application/Core/MappingProfiles.cs": {
-    "mtime": 1791950907.723237,
-    "seen": 1791986168.8980997,
-    "ast_hash": "dbb167c85fea69dff547681376f2c205",
-    "semantic_hash": "dbb167c85fea69dff547681376f2c205"
+    "mtime": 1791998763.9731877,
+    "seen": 1791998918.5035625,
+    "ast_hash": "cb985432d0ed40bd526c5d018fa08d75",
+    "semantic_hash": ""
   },
   "src/EventsHub.Application/EventsHub.Application.csproj": {
-    "mtime": 1791951179.5485375,
-    "seen": 1791986168.8980997,
-    "ast_hash": "9a0b29dd602d58a274aa78f2d601c4ca",
-    "semantic_hash": "9a0b29dd602d58a274aa78f2d601c4ca"
+    "mtime": 1791998864.9503055,
+    "seen": 1791998918.5035625,
+    "ast_hash": "4acab3c02c1db703e43a65712ea91385",
+    "semantic_hash": ""
   },
   "src/EventsHub.Application/Events/Commands/CreateEvent.cs": {
     "mtime": 1791228872.3656986,
@@ -102,10 +102,10 @@
     "semantic_hash": "1ef487998ff8e6860c27bd44069546b2"
   },
   "src/EventsHub.Application/Events/Commands/EditEvent.cs": {
-    "mtime": 1791951163.641003,
-    "seen": 1791986168.8980997,
-    "ast_hash": "c2ac1e0360c0fbc1fa7f41f649327bc3",
-    "semantic_hash": "c2ac1e0360c0fbc1fa7f41f649327bc3"
+    "mtime": 1791998765.0162401,
+    "seen": 1791998918.5035625,
+    "ast_hash": "47530016a32c728be48b5559613f7179",
+    "semantic_hash": ""
   },
   "src/EventsHub.Application/Events/Queries/GetEventDetails.cs": {
     "mtime": 1791228326.456317,
@@ -204,10 +204,10 @@
     "semantic_hash": "63824aca377fdb3fcfa242146766a475"
   },
   "tests/EventsHub.UnitTests/Controllers/EventsControllerTests.cs": {
-    "mtime": 1790641409.503135,
-    "seen": 1791986168.8980997,
-    "ast_hash": "410b9090764fc1a48dc6900b90d2e5af",
-    "semantic_hash": "410b9090764fc1a48dc6900b90d2e5af"
+    "mtime": 1791998713.7446601,
+    "seen": 1791998918.5035625,
+    "ast_hash": "a8bfe51aa592dba2e529e85938e2450b",
+    "semantic_hash": ""
   },
   "tests/EventsHub.UnitTests/EventsHub.UnitTests.csproj": {
     "mtime": 1790613780.2716978,
@@ -360,10 +360,10 @@
     "semantic_hash": "c6ee39e1e260995a9f0774f5a01f66c3"
   },
   "src/EventsHub.Application/README.md": {
-    "mtime": 1790886133.0855734,
-    "seen": 1791986168.8980997,
-    "ast_hash": "f082284dda424d546dea7bb5212e8fde",
-    "semantic_hash": "f082284dda424d546dea7bb5212e8fde"
+    "mtime": 1791998901.4578216,
+    "seen": 1791998918.5035625,
+    "ast_hash": "7cc07009e7e76c680c40b2a9d56d8e0d",
+    "semantic_hash": ""
   },
   "src/EventsHub.Domain/README.md": {
     "mtime": 1790880589.4610236,
@@ -502,5 +502,155 @@
     "seen": 1791986168.8980997,
     "ast_hash": "6d5180a782d64c8cf51ba01c2a2184d8",
     "semantic_hash": "6d5180a782d64c8cf51ba01c2a2184d8"
+  },
+  "src/EventsHub.Application/Core/IMapper.cs": {
+    "mtime": 1791996731.1520562,
+    "seen": 1791998918.5035625,
+    "ast_hash": "88df8b738a49116af6a7b121e9fdc37c",
+    "semantic_hash": ""
+  },
+  "src/EventsHub.Application/Core/Mapper.cs": {
+    "mtime": 1791996742.7512658,
+    "seen": 1791998918.5035625,
+    "ast_hash": "dae1858c7f728ddd7ec7342f5e8d0399",
+    "semantic_hash": ""
+  },
+  "src/EventsHub.Application/Core/MapperRegistry.cs": {
+    "mtime": 1791996740.8243933,
+    "seen": 1791998918.5035625,
+    "ast_hash": "21f64339381d4b1124bc3be8ef751e15",
+    "semantic_hash": ""
+  },
+  "src/EventsHub.Application/Core/MapperServiceCollectionExtensions.cs": {
+    "mtime": 1791996744.5126178,
+    "seen": 1791998918.5035625,
+    "ast_hash": "0ba83c4d60ff12aea2a4597d5e1b1364",
+    "semantic_hash": ""
+  },
+  "src/EventsHub.Application/Core/Profile.cs": {
+    "mtime": 1791996732.8116586,
+    "seen": 1791998918.5035625,
+    "ast_hash": "ef2806f80913af74af37694b261fcf1c",
+    "semantic_hash": ""
+  },
+  "tests/EventsHub.UnitTests/Core/MapperTests.cs": {
+    "mtime": 1791998776.52707,
+    "seen": 1791998918.5035625,
+    "ast_hash": "41de27102b7732af295694b37dc6d5b9",
+    "semantic_hash": ""
+  },
+  "tests/EventsHub.UnitTests/Events/EditEventTests.cs": {
+    "mtime": 1791998782.3327687,
+    "seen": 1791998918.5035625,
+    "ast_hash": "3e8e770c5eb7a2ea75721f5b9150fb62",
+    "semantic_hash": ""
+  },
+  ".claude/commands/opsx/apply.md": {
+    "mtime": 1791995640.4154143,
+    "seen": 1791998918.5035625,
+    "ast_hash": "7b4a3e16aa083b09c502cace6c8ccdd2",
+    "semantic_hash": ""
+  },
+  ".claude/commands/opsx/archive.md": {
+    "mtime": 1791995640.4190063,
+    "seen": 1791998918.5035625,
+    "ast_hash": "87923b13180e4faa88b6a8a8d04b7751",
+    "semantic_hash": ""
+  },
+  ".claude/commands/opsx/explore.md": {
+    "mtime": 1791995640.4144087,
+    "seen": 1791998918.5035625,
+    "ast_hash": "734b2313c127092244077dcba14bf868",
+    "semantic_hash": ""
+  },
+  ".claude/commands/opsx/propose.md": {
+    "mtime": 1791995640.4200082,
+    "seen": 1791998918.5035625,
+    "ast_hash": "a9570540fdf1a5d22073478705f797f5",
+    "semantic_hash": ""
+  },
+  ".claude/commands/opsx/sync.md": {
+    "mtime": 1791995640.417926,
+    "seen": 1791998918.5035625,
+    "ast_hash": "026755855f5363483763efc5a2b73e15",
+    "semantic_hash": ""
+  },
+  ".claude/commands/opsx/update.md": {
+    "mtime": 1791995640.416921,
+    "seen": 1791998918.5035625,
+    "ast_hash": "36ac8697688d9cb41e65b5b080d886cf",
+    "semantic_hash": ""
+  },
+  ".claude/skills/openspec-apply-change/SKILL.md": {
+    "mtime": 1791995640.405969,
+    "seen": 1791998918.5035625,
+    "ast_hash": "b1d2610249304da7ff034b13d1e6ec48",
+    "semantic_hash": ""
+  },
+  ".claude/skills/openspec-archive-change/SKILL.md": {
+    "mtime": 1791995640.4104824,
+    "seen": 1791998918.5035625,
+    "ast_hash": "fd5806ecf0b66a942594121ce256ddbe",
+    "semantic_hash": ""
+  },
+  ".claude/skills/openspec-explore/SKILL.md": {
+    "mtime": 1791995640.4029846,
+    "seen": 1791998918.5035625,
+    "ast_hash": "bd943319f2bd859e1bac33f87ef60d83",
+    "semantic_hash": ""
+  },
+  ".claude/skills/openspec-propose/SKILL.md": {
+    "mtime": 1791995640.412481,
+    "seen": 1791998918.5035625,
+    "ast_hash": "0f2d7792270c33eb1bb48f0ae7538faf",
+    "semantic_hash": ""
+  },
+  ".claude/skills/openspec-sync-specs/SKILL.md": {
+    "mtime": 1791995640.4084797,
+    "seen": 1791998918.5035625,
+    "ast_hash": "c4519a55f12e4aee41c112c96201ad9d",
+    "semantic_hash": ""
+  },
+  ".claude/skills/openspec-update-change/SKILL.md": {
+    "mtime": 1791995640.4074738,
+    "seen": 1791998918.5035625,
+    "ast_hash": "0d317fc48152c8e7ad9ab80014734bed",
+    "semantic_hash": ""
+  },
+  "openspec/changes/replace-automapper-custom-mapper/.openspec.yaml": {
+    "mtime": 1791996086.8452666,
+    "seen": 1791998918.5035625,
+    "ast_hash": "b1d4ed5da7926c70e32d2d0c0c6574f2",
+    "semantic_hash": ""
+  },
+  "openspec/changes/replace-automapper-custom-mapper/design.md": {
+    "mtime": 1791996168.8836482,
+    "seen": 1791998918.5035625,
+    "ast_hash": "57e1f99561d78b1e6a16627b870bb048",
+    "semantic_hash": ""
+  },
+  "openspec/changes/replace-automapper-custom-mapper/proposal.md": {
+    "mtime": 1791996195.1432872,
+    "seen": 1791998918.5035625,
+    "ast_hash": "8fc04e790ce74980356645c752e49d0a",
+    "semantic_hash": ""
+  },
+  "openspec/changes/replace-automapper-custom-mapper/specs/object-mapping/spec.md": {
+    "mtime": 1791996151.0648215,
+    "seen": 1791998918.5035625,
+    "ast_hash": "2f5fe2aeecdfb7b4080b8a82b58f44c4",
+    "semantic_hash": ""
+  },
+  "openspec/changes/replace-automapper-custom-mapper/tasks.md": {
+    "mtime": 1791998908.232311,
+    "seen": 1791998918.5035625,
+    "ast_hash": "58e2940dc7e7db998c6512c8a846d018",
+    "semantic_hash": ""
+  },
+  "openspec/config.yaml": {
+    "mtime": 1791995640.4221656,
+    "seen": 1791998918.5035625,
+    "ast_hash": "500a0a16229f8fd0848dc7cff85d21e9",
+    "semantic_hash": ""
   }
 }

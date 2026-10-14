@@ -15,7 +15,7 @@ builder.Services.AddCors();
 builder.Services.AddMediatR(opt =>
     opt.RegisterServicesFromAssemblyContaining<GetEventsList.Handler>()
 );
-builder.Services.AddAutoMapper(typeof(MappingProfiles).Assembly);
+builder.Services.AddMapper(typeof(MappingProfiles).Assembly);
 
 
 

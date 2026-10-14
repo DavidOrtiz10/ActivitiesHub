@@ -1,4 +1,4 @@
-using AutoMapper;
+using EventsHub.Application.Core;
 using EventsHub.Domain;
 using EventsHub.Persistence;
 using MediatR;
