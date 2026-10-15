@@ -48,9 +48,9 @@
     "semantic_hash": "5c35f77b673784c2439cff159b77b97c"
   },
   "src/EventsHub.Api/Program.cs": {
-    "mtime": 1791998766.0781214,
-    "seen": 1791998918.5035625,
-    "ast_hash": "a20786c884f133ea172a21b260b29516",
+    "mtime": 1792041213.5294979,
+    "seen": 1792041488.4590468,
+    "ast_hash": "7cc0e0add25fccacab6dab1c3e3738be",
     "semantic_hash": ""
   },
   "src/EventsHub.Api/Properties/launchSettings.json": {
@@ -77,16 +77,10 @@
     "ast_hash": "4fe26a6c717e77372db05a34aad9ed75",
     "semantic_hash": "4fe26a6c717e77372db05a34aad9ed75"
   },
-  "src/EventsHub.Application/Core/MappingProfiles.cs": {
-    "mtime": 1791998763.9731877,
-    "seen": 1791998918.5035625,
-    "ast_hash": "cb985432d0ed40bd526c5d018fa08d75",
-    "semantic_hash": ""
-  },
   "src/EventsHub.Application/EventsHub.Application.csproj": {
-    "mtime": 1791998864.9503055,
-    "seen": 1791998918.5035625,
-    "ast_hash": "4acab3c02c1db703e43a65712ea91385",
+    "mtime": 1792041211.244413,
+    "seen": 1792041488.4590468,
+    "ast_hash": "ee88e2ded16f8ae4364f9b10b5726c62",
     "semantic_hash": ""
   },
   "src/EventsHub.Application/Events/Commands/CreateEvent.cs": {
@@ -102,9 +96,9 @@
     "semantic_hash": "1ef487998ff8e6860c27bd44069546b2"
   },
   "src/EventsHub.Application/Events/Commands/EditEvent.cs": {
-    "mtime": 1791998765.0162401,
-    "seen": 1791998918.5035625,
-    "ast_hash": "47530016a32c728be48b5559613f7179",
+    "mtime": 1792041212.4931188,
+    "seen": 1792041488.4590468,
+    "ast_hash": "512186b536e68b1dc165219e99fc8760",
     "semantic_hash": ""
   },
   "src/EventsHub.Application/Events/Queries/GetEventDetails.cs": {
@@ -204,9 +198,9 @@
     "semantic_hash": "63824aca377fdb3fcfa242146766a475"
   },
   "tests/EventsHub.UnitTests/Controllers/EventsControllerTests.cs": {
-    "mtime": 1791998713.7446601,
-    "seen": 1791998918.5035625,
-    "ast_hash": "a8bfe51aa592dba2e529e85938e2450b",
+    "mtime": 1792041215.5975738,
+    "seen": 1792041488.4590468,
+    "ast_hash": "c88016be92b23104bdb29c1f208b4604",
     "semantic_hash": ""
   },
   "tests/EventsHub.UnitTests/EventsHub.UnitTests.csproj": {
@@ -233,12 +227,6 @@
     "ast_hash": "a855a8bf83651f06e8740424f72481ea",
     "semantic_hash": "a855a8bf83651f06e8740424f72481ea"
   },
-  "web/EventsHub/src/App.tsx": {
-    "mtime": 1790221620.0389664,
-    "seen": 1791986168.8980997,
-    "ast_hash": "f4944d6dd181ad756ee1d21d0a39bd2b",
-    "semantic_hash": "f4944d6dd181ad756ee1d21d0a39bd2b"
-  },
   "web/EventsHub/src/lib/types/index.d.ts": {
     "mtime": 1790221620.0463402,
     "seen": 1791986168.8980997,
@@ -246,10 +234,10 @@
     "semantic_hash": "688e4b6c6995bd690ccc42b7be07fc9f"
   },
   "web/EventsHub/src/main.tsx": {
-    "mtime": 1790221620.047338,
-    "seen": 1791986168.8980997,
-    "ast_hash": "bf20440e72c8509231f30b54c1404814",
-    "semantic_hash": "bf20440e72c8509231f30b54c1404814"
+    "mtime": 1792038145.829862,
+    "seen": 1792041488.4590468,
+    "ast_hash": "7bb54e534a738ed97999ec4547a21002",
+    "semantic_hash": ""
   },
   "web/EventsHub/tsconfig.app.json": {
     "mtime": 1790221620.0482554,
@@ -360,9 +348,9 @@
     "semantic_hash": "c6ee39e1e260995a9f0774f5a01f66c3"
   },
   "src/EventsHub.Application/README.md": {
-    "mtime": 1791998901.4578216,
-    "seen": 1791998918.5035625,
-    "ast_hash": "7cc07009e7e76c680c40b2a9d56d8e0d",
+    "mtime": 1792041459.5251856,
+    "seen": 1792041488.4590468,
+    "ast_hash": "c1629dc49068ed03e913aea320368e2a",
     "semantic_hash": ""
   },
   "src/EventsHub.Domain/README.md": {
@@ -503,46 +491,16 @@
     "ast_hash": "6d5180a782d64c8cf51ba01c2a2184d8",
     "semantic_hash": "6d5180a782d64c8cf51ba01c2a2184d8"
   },
-  "src/EventsHub.Application/Core/IMapper.cs": {
-    "mtime": 1791996731.1520562,
-    "seen": 1791998918.5035625,
-    "ast_hash": "88df8b738a49116af6a7b121e9fdc37c",
-    "semantic_hash": ""
-  },
-  "src/EventsHub.Application/Core/Mapper.cs": {
-    "mtime": 1791996742.7512658,
-    "seen": 1791998918.5035625,
-    "ast_hash": "dae1858c7f728ddd7ec7342f5e8d0399",
-    "semantic_hash": ""
-  },
-  "src/EventsHub.Application/Core/MapperRegistry.cs": {
-    "mtime": 1791996740.8243933,
-    "seen": 1791998918.5035625,
-    "ast_hash": "21f64339381d4b1124bc3be8ef751e15",
-    "semantic_hash": ""
-  },
-  "src/EventsHub.Application/Core/MapperServiceCollectionExtensions.cs": {
-    "mtime": 1791996744.5126178,
-    "seen": 1791998918.5035625,
-    "ast_hash": "0ba83c4d60ff12aea2a4597d5e1b1364",
-    "semantic_hash": ""
-  },
-  "src/EventsHub.Application/Core/Profile.cs": {
-    "mtime": 1791996732.8116586,
-    "seen": 1791998918.5035625,
-    "ast_hash": "ef2806f80913af74af37694b261fcf1c",
-    "semantic_hash": ""
-  },
   "tests/EventsHub.UnitTests/Core/MapperTests.cs": {
-    "mtime": 1791998776.52707,
-    "seen": 1791998918.5035625,
-    "ast_hash": "41de27102b7732af295694b37dc6d5b9",
+    "mtime": 1792041242.0134723,
+    "seen": 1792041488.4590468,
+    "ast_hash": "4ccf7989ad2be218159a3a1414b0f175",
     "semantic_hash": ""
   },
   "tests/EventsHub.UnitTests/Events/EditEventTests.cs": {
-    "mtime": 1791998782.3327687,
-    "seen": 1791998918.5035625,
-    "ast_hash": "3e8e770c5eb7a2ea75721f5b9150fb62",
+    "mtime": 1792041214.5622785,
+    "seen": 1792041488.4590468,
+    "ast_hash": "c104513ad962850d777b0bb9ec2b9ea3",
     "semantic_hash": ""
   },
   ".claude/commands/opsx/apply.md": {
@@ -657,6 +615,84 @@
     "mtime": 1791999136.7937317,
     "seen": 1791999512.2315779,
     "ast_hash": "5ea84851bb7dee3a850bd7b0abcdf1e2",
+    "semantic_hash": ""
+  },
+  "src/EventsHub.Application/Core/Mapping/IMapper.cs": {
+    "mtime": 1792041192.1277773,
+    "seen": 1792041488.4590468,
+    "ast_hash": "51900cb95379f9dd6e701bb6a5a3f335",
+    "semantic_hash": ""
+  },
+  "src/EventsHub.Application/Core/Mapping/IMappingExpression.cs": {
+    "mtime": 1792041172.725458,
+    "seen": 1792041488.4590468,
+    "ast_hash": "94b38faeb71fc6d7b0308e47d5610dca",
+    "semantic_hash": ""
+  },
+  "src/EventsHub.Application/Core/Mapping/Mapper.cs": {
+    "mtime": 1792041196.7646298,
+    "seen": 1792041488.4590468,
+    "ast_hash": "8255f77a19462b51169d80782be23d6c",
+    "semantic_hash": ""
+  },
+  "src/EventsHub.Application/Core/Mapping/MapperServiceCollectionExtensions.cs": {
+    "mtime": 1792041200.525261,
+    "seen": 1792041488.4590468,
+    "ast_hash": "9478eb243702b16708a80187e5da0a86",
+    "semantic_hash": ""
+  },
+  "src/EventsHub.Application/Core/Mapping/MappingProfiles.cs": {
+    "mtime": 1792041201.5549624,
+    "seen": 1792041488.4590468,
+    "ast_hash": "6b315753864421460266c26832de1d7d",
+    "semantic_hash": ""
+  },
+  "src/EventsHub.Application/Core/Mapping/Profile.cs": {
+    "mtime": 1792041190.3226857,
+    "seen": 1792041488.4590468,
+    "ast_hash": "31c110996ea1fb5e56b7935566757028",
+    "semantic_hash": ""
+  },
+  "src/EventsHub.Application/Core/Mapping/TypeMap.cs": {
+    "mtime": 1792041188.4031587,
+    "seen": 1792041488.4590468,
+    "ast_hash": "bcadd9cf5456188d121d315e91062427",
+    "semantic_hash": ""
+  },
+  "web/EventsHub/src/app/layout/App.tsx": {
+    "mtime": 1790221620.0389664,
+    "seen": 1792041488.4590468,
+    "ast_hash": "f4944d6dd181ad756ee1d21d0a39bd2b",
+    "semantic_hash": ""
+  },
+  "openspec/changes/mapper-overrides-nested-collections/.openspec.yaml": {
+    "mtime": 1792041112.4251041,
+    "seen": 1792041488.4590468,
+    "ast_hash": "b1d4ed5da7926c70e32d2d0c0c6574f2",
+    "semantic_hash": ""
+  },
+  "openspec/changes/mapper-overrides-nested-collections/design.md": {
+    "mtime": 1792041141.072884,
+    "seen": 1792041488.4590468,
+    "ast_hash": "aa417ee8a3feb418fd919283c059a448",
+    "semantic_hash": ""
+  },
+  "openspec/changes/mapper-overrides-nested-collections/proposal.md": {
+    "mtime": 1792041121.9430778,
+    "seen": 1792041488.4590468,
+    "ast_hash": "3e0cf84dd3ca64935df553f2c6a8cf3f",
+    "semantic_hash": ""
+  },
+  "openspec/changes/mapper-overrides-nested-collections/specs/object-mapping/spec.md": {
+    "mtime": 1792041127.9756424,
+    "seen": 1792041488.4590468,
+    "ast_hash": "34c2518334ea4fda802debc98b85346f",
+    "semantic_hash": ""
+  },
+  "openspec/changes/mapper-overrides-nested-collections/tasks.md": {
+    "mtime": 1792041146.8625903,
+    "seen": 1792041488.4590468,
+    "ast_hash": "d03006d961680549d0e71b11deeed0ce",
     "semantic_hash": ""
   }
 }

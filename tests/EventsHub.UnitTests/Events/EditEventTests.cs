@@ -1,4 +1,4 @@
-using EventsHub.Application.Core;
+using EventsHub.Application.Core.Mapping;
 using EventsHub.Application.Events.Commands;
 using EventsHub.Domain;
 using Microsoft.EntityFrameworkCore;

@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using EventsHub.Persistence;
 using EventsHub.Application.Events.Queries;
-using EventsHub.Application.Core;
+using EventsHub.Application.Core.Mapping;
 
 var builder = WebApplication.CreateBuilder(args);
 

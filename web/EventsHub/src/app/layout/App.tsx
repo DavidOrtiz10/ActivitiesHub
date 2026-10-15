@@ -3,7 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 function App() {
-  const [activities, setActivities] = useState<Activity[]>([]);
+  const [activities, setActivities] = useState<Event[]>([]);
 
   useEffect(() => {
     axios
@@ -17,7 +17,7 @@ function App() {
     <>
       <Typography variant="h3">Events Hub</Typography>
       <List>
-        {activities.map((activity: Activity) => (
+        {activities.map((activity: Event) => (
           <ListItem key={activity.id}>
             <ListItemText>{activity.title}</ListItemText>
           </ListItem>

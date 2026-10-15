@@ -1,5 +1,5 @@
 using EventsHub.Api.Controllers;
-using EventsHub.Application.Core;
+using EventsHub.Application.Core.Mapping;
 using EventsHub.Application.Events.Queries;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

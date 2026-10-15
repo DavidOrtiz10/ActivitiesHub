@@ -9,6 +9,4 @@ type Activity = {
   venue: string;
   latitude: number;
   longitude: number;
-}
-
-
+};

@@ -31,12 +31,14 @@ MediatR is registered in `src/EventsHub.Api/Program.cs` by scanning this assembl
 
 ## Mapping
 
-`Core/` contains a small in-house mapper. It copies the members of one object onto another and replaces the AutoMapper dependency this project used before.
+`Core/Mapping/` contains a small in-house mapper in the `EventsHub.Application.Core.Mapping` namespace. It copies the members of one object onto another and replaces the AutoMapper dependency this project used before.
 
 | Type | Role |
 |---|---|
 | `IMapper` | What handlers inject. `Map<TDestination>(source)` creates a new object; `Map(source, destination)` copies onto an existing one and returns it. |
 | `Profile` | Base class for profiles. Declare maps in the constructor with `CreateMap<TSource, TDestination>()`. |
+| `IMappingExpression` | What `CreateMap` returns. `ForMember` overrides one destination member. |
+| `Mapper` | The implementation. Built from profiles; validates and compiles every map in its constructor. |
 | `MappingProfiles` | The project's profile. |
 | `AddMapper(assemblies)` | DI extension that finds every `Profile` in the given assemblies and registers `IMapper` as a singleton. |
 
@@ -64,13 +66,31 @@ mapper.Map(request.Event, @event);
 2. Call `CreateMap<TSource, TDestination>()` for each pair in its constructor.
 3. Inject `IMapper` where you need it. No registration change is needed: `AddMapper` scans the assembly at startup.
 
+### Per-member rules
+
+A member can be computed from the source or ignored. A rule wins over name matching for that member:
+
+```csharp
+CreateMap<Event, EventSummary>()
+    .ForMember(d => d.Location, o => o.MapFrom(s => s.City + ", " + s.Venue))
+    .ForMember(d => d.Notes, o => o.Ignore());
+```
+
+`ForMember` must select a public writable property and must call exactly one of `MapFrom` or `Ignore`, otherwise the profile throws `ArgumentException`.
+
+### Nested objects and collections
+
+If a source member and the matching destination member have different types, the mapper uses the map declared for those types, in any profile and in any order. A collection member is mapped element by element, in order, through the map for the element types. A null nested source gives a null destination member.
+
 ### Rules and limits
 
 - Members are matched by name (case-sensitive) between public readable properties on the source and public settable properties on the destination. Source members with no match are ignored.
-- A matching name with incompatible types makes the application fail at startup, as does declaring the same map in two profiles.
+- A matching name whose types are not assignable and that no override, nested map or collection map converts makes the application fail at startup. The error names the map and the member. Declaring the same map in two profiles, or mapping to a type with no public parameterless constructor, also fails at startup.
 - Mapping a pair that no profile declared throws `InvalidOperationException` and leaves the destination untouched.
-- Values are copied by reference. This is safe for the string, `DateTime` and `bool` members of `Event`, but a profile that maps nested objects would share them between source and destination.
-- There are no per-member rules (`ForMember`, `MapFrom`, `Ignore`), collection mapping or `IQueryable` projection yet. Add them in a new change.
+- Plain members are copied by reference. A nested member mapped through a map becomes a new instance: mapping onto an existing destination replaces the nested object instead of merging into it.
+- A collection member maps only into a destination type that a `List<T>` is assignable to (`List<T>`, `IList<T>`, `ICollection<T>`, `IEnumerable<T>`, `IReadOnlyList<T>`). Arrays and sets are rejected at startup.
+- Data that refers to itself (a cycle) is not detected and would recurse. There is no `IQueryable` projection.
+- A profile instance belongs to one `Mapper`. `AddMapper` creates new profile instances itself.
 - The unit tests are in `tests/EventsHub.UnitTests/Core/MapperTests.cs`.
 
 ## When you add code
