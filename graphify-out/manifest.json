@@ -228,15 +228,15 @@
     "semantic_hash": "a855a8bf83651f06e8740424f72481ea"
   },
   "web/EventsHub/src/lib/types/index.d.ts": {
-    "mtime": 1790221620.0463402,
-    "seen": 1791986168.8980997,
-    "ast_hash": "688e4b6c6995bd690ccc42b7be07fc9f",
-    "semantic_hash": "688e4b6c6995bd690ccc42b7be07fc9f"
+    "mtime": 1792092194.3280115,
+    "seen": 1792094159.622773,
+    "ast_hash": "587e4e95f514ba66a50707a1e2965ff2",
+    "semantic_hash": ""
   },
   "web/EventsHub/src/main.tsx": {
-    "mtime": 1792038145.829862,
-    "seen": 1792041488.4590468,
-    "ast_hash": "7bb54e534a738ed97999ec4547a21002",
+    "mtime": 1792092476.239333,
+    "seen": 1792094159.622773,
+    "ast_hash": "69048b0cc48e383cb817dcdecaa2c2d3",
     "semantic_hash": ""
   },
   "web/EventsHub/tsconfig.app.json": {
@@ -330,10 +330,10 @@
     "semantic_hash": "10edbb930b121ca79ceacf25e367b5db"
   },
   "Docs/guides/install-graphify-openspec.md": {
-    "mtime": 1791956568.8218527,
-    "seen": 1791986168.8980997,
-    "ast_hash": "0b264f1d60750cb8c2ffd56e29c5ac10",
-    "semantic_hash": "0b264f1d60750cb8c2ffd56e29c5ac10"
+    "mtime": 1792094089.5666318,
+    "seen": 1792094159.622773,
+    "ast_hash": "dfc25394b3c8691957c921e1b3e884e7",
+    "semantic_hash": ""
   },
   "README.md": {
     "mtime": 1790886091.428456,
@@ -472,24 +472,6 @@
     "seen": 1791986168.8980997,
     "ast_hash": "21c7473c592c67dc87223d49892c8f0a",
     "semantic_hash": "21c7473c592c67dc87223d49892c8f0a"
-  },
-  "web/EventsHub/src/assets/hero.png": {
-    "mtime": 1790221620.0423417,
-    "seen": 1791986168.8980997,
-    "ast_hash": "aead493361b27e7510691c5d7072dfc1",
-    "semantic_hash": "aead493361b27e7510691c5d7072dfc1"
-  },
-  "web/EventsHub/src/assets/react.svg": {
-    "mtime": 1790221620.0423417,
-    "seen": 1791986168.8980997,
-    "ast_hash": "f0402b67b6ce880f65666bb49e841696",
-    "semantic_hash": "f0402b67b6ce880f65666bb49e841696"
-  },
-  "web/EventsHub/src/assets/vite.svg": {
-    "mtime": 1790221620.0443594,
-    "seen": 1791986168.8980997,
-    "ast_hash": "6d5180a782d64c8cf51ba01c2a2184d8",
-    "semantic_hash": "6d5180a782d64c8cf51ba01c2a2184d8"
   },
   "tests/EventsHub.UnitTests/Core/MapperTests.cs": {
     "mtime": 1792041242.0134723,
@@ -660,9 +642,9 @@
     "semantic_hash": ""
   },
   "web/EventsHub/src/app/layout/App.tsx": {
-    "mtime": 1790221620.0389664,
-    "seen": 1792041488.4590468,
-    "ast_hash": "f4944d6dd181ad756ee1d21d0a39bd2b",
+    "mtime": 1792092104.5768833,
+    "seen": 1792094159.622773,
+    "ast_hash": "c2a46de8679de3539e19e52ac77b292c",
     "semantic_hash": ""
   },
   "openspec/changes/mapper-overrides-nested-collections/.openspec.yaml": {
@@ -690,9 +672,9 @@
     "semantic_hash": ""
   },
   "openspec/changes/mapper-overrides-nested-collections/tasks.md": {
-    "mtime": 1792041146.8625903,
-    "seen": 1792041488.4590468,
-    "ast_hash": "d03006d961680549d0e71b11deeed0ce",
+    "mtime": 1792041501.51821,
+    "seen": 1792094159.622773,
+    "ast_hash": "25c2a75e1c6165bbee03939020f9866c",
     "semantic_hash": ""
   }
 }

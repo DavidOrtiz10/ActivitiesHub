@@ -1,17 +1,17 @@
-# Graph Report - EventsHub  (2026-10-14)
+# Graph Report - EventsHub  (2026-10-15)
 
 ## Corpus Check
-- 96 files · ~76,996 words
+- 96 files · ~76,109 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 9 file(s) not represented in the graph (top: (none) 7, .nswag 1, .css 1)
 
 ## Summary
-- 842 nodes · 1397 edges · 66 communities (45 shown, 21 thin omitted)
-- Extraction: 88% EXTRACTED · 12% INFERRED · 0% AMBIGUOUS · INFERRED: 164 edges (avg confidence: 0.87)
+- 840 nodes · 1393 edges · 68 communities (47 shown, 21 thin omitted)
+- Extraction: 88% EXTRACTED · 12% INFERRED · 0% AMBIGUOUS · INFERRED: 163 edges (avg confidence: 0.87)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `85a01f66`
+- Built from commit: `7c98b561`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -19,7 +19,7 @@
 - Event
 - Task
 - EventsHub Architecture Document
-- EventsHub.Domain
+- EventsHub.Persistence
 - EventsHub.UnitTests.csproj
 - EventsHub.IntegrationTests README
 - WeatherForecast
@@ -42,43 +42,45 @@
 - scripts
 - Requirement: Per-member overrides
 - Projections and Read Model Rebuilding
-- Vite Logo (SVG)
+- EventsControllerTests
 - tsconfig.json
 - Result Pattern vs Exceptions
 - favicon.svg (Vite logo favicon)
-- Hero Image (layered isometric tiles)
-- React Logo (react.svg)
+- Handler
+- EventsControllerTests.cs
 - index.d.ts
 - Configuration and the Options Pattern
 - Events Bruno folder
 - WeatherForecast Bruno folder
 - Decisions
 - MapperTests
-- AppDbContext
+- MappingProfiles
 - TypeMap
 - openspec-explore/SKILL.md
 - Layered by Project, Not by Behavior
-- EventsController.cs
+- EventsHubBaseController
 - explore.md
 - CLAUDE.md (project guidance)
-- InitialCreate
+- DateTime
 - OpenAPI Manual Setup Guide (OpenApi 1.md)
 - EventsHub.Application.Core.Mapping
 - EventsHub Web README
 - EventsHub Root README
 - IMapper
 - 20260907164228_InitialCreate.Designer.cs
-- mediatr
+- Proposal
 - OrderCopy
 - eslint.config.js
 - axios
+- Proposal
+- Decisions
 
 ## God Nodes (most connected - your core abstractions)
 1. `MapperTests` - 49 edges
 2. `Mapper` - 33 edges
 3. `Profile` - 30 edges
-4. `Event` - 26 edges
-5. `TypeMap` - 24 edges
+4. `TypeMap` - 24 edges
+5. `Event` - 24 edges
 6. `EventsHub Architecture Document` - 21 edges
 7. `EventsRpcClient` - 20 edges
 8. `WeatherForecastRpcClient` - 19 edges
@@ -86,16 +88,16 @@
 10. `compilerOptions` - 15 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `1. A public `Mapper` built from profiles replaces `MapperRegistry`` --references--> `Mapper`  [INFERRED]
-  openspec/changes/mapper-overrides-nested-collections/design.md → src/EventsHub.Application/Core/Mapping/Mapper.cs
 - `Context` --references--> `Mapper`  [INFERRED]
   openspec/changes/mapper-overrides-nested-collections/design.md → src/EventsHub.Application/Core/Mapping/Mapper.cs
-- `1. Mapper core` --references--> `EventsController`  [INFERRED]
-  openspec/changes/archive/2026-10-14-replace-automapper-custom-mapper/tasks.md → src/EventsHub.Api/Controllers/EventsController.cs
-- `1. Mapper core` --references--> `Mapper`  [INFERRED]
-  openspec/changes/archive/2026-10-14-replace-automapper-custom-mapper/tasks.md → src/EventsHub.Application/Core/Mapping/Mapper.cs
-- `3. Remove AutoMapper and document` --references--> `Mapper`  [INFERRED]
-  openspec/changes/archive/2026-10-14-replace-automapper-custom-mapper/tasks.md → src/EventsHub.Application/Core/Mapping/Mapper.cs
+- `1. A public `Mapper` built from profiles replaces `MapperRegistry`` --references--> `Mapper`  [INFERRED]
+  openspec/changes/mapper-overrides-nested-collections/design.md → src/EventsHub.Application/Core/Mapping/Mapper.cs
+- `Risks / Trade-offs` --references--> `Mapper`  [INFERRED]
+  openspec/changes/mapper-overrides-nested-collections/design.md → src/EventsHub.Application/Core/Mapping/Mapper.cs
+- `What Changes` --references--> `Mapper`  [INFERRED]
+  openspec/changes/mapper-overrides-nested-collections/proposal.md → src/EventsHub.Application/Core/Mapping/Mapper.cs
+- `What Changes` --references--> `MappingProfiles`  [INFERRED]
+  openspec/changes/mapper-overrides-nested-collections/proposal.md → src/EventsHub.Application/Core/Mapping/MappingProfiles.cs
 
 ## Import Cycles
 - None detected.
@@ -108,27 +110,27 @@
 - **CQRS Distributed Reliability Patterns** — docs_fundamentals_cqrsfundamentals_eventual_consistency, docs_fundamentals_cqrsfundamentals_outbox_pattern, docs_fundamentals_cqrsfundamentals_sagas, docs_fundamentals_cqrsfundamentals_idempotency_concurrency, docs_fundamentals_cqrsfundamentals_projections [INFERRED 0.85]
 - **Social/brand link icons (Vite template)** — web_eventshub_public_icons_bluesky_icon, web_eventshub_public_icons_discord_icon, web_eventshub_public_icons_github_icon, web_eventshub_public_icons_x_icon [INFERRED 0.85]
 
-## Communities (66 total, 21 thin omitted)
+## Communities (68 total, 21 thin omitted)
 
 ### Community 0 - "Event"
-Cohesion: 0.06
-Nodes (24): EventsController, Command, Event, Command, Event, GetEventQueries, Handler, Query (+16 more)
+Cohesion: 0.05
+Nodes (32): EventsController, Command, Event, CreateEvent, Handler, Command, Id, DeleteEvent (+24 more)
 
 ### Community 1 - "Task"
 Cohesion: 0.06
-Nodes (23): EventsHub.OpenApi.Client, Handler, Handler, ApiException, ApiException, Result, Headers, Response (+15 more)
+Nodes (21): EventsHub.OpenApi.Client, ApiException, ApiException, Result, Headers, Response, StatusCode, DateFormatConverter (+13 more)
 
 ### Community 2 - "EventsHub Architecture Document"
 Cohesion: 0.20
 Nodes (14): EventsHub Architecture Document, API Startup (migrate + seed + CORS), Brittle Bruno Test with Fixed Event Id, Activity vs Event Model Divergence (lat/long types), Request Flow: Loading the Event List, EventsHub.Api README, CORS Origins localhost:3000, Events API Endpoints (/api/v1/events, /{id}, weatherforecast) (+6 more)
 
-### Community 3 - "EventsHub.Domain"
-Cohesion: 0.21
-Nodes (6): EventsHub.Domain, EventsHub.Application.Events.Queries, EventsHub.UnitTests, EventsHub.Persistence, GetEventsList, DbInitializer
+### Community 3 - "EventsHub.Persistence"
+Cohesion: 0.27
+Nodes (4): EventsHub.Domain, EventsHub.Application.Events.Queries, EventsHub.Application.Events.Commands, EventsHub.Persistence
 
 ### Community 4 - "EventsHub.UnitTests.csproj"
 Cohesion: 0.08
-Nodes (25): coverlet.collector (6.0.4), MediatR (14.2.0), Microsoft.AspNetCore.Mvc.NewtonsoftJson (10.0.11), Microsoft.AspNetCore.OpenApi (10.0.11), Microsoft.EntityFrameworkCore.Design (10.0.11), Microsoft.EntityFrameworkCore.Sqlite (10.0.11), Microsoft.NET.Test.Sdk (17.14.0), Moq (4.20.72) (+17 more)
+Nodes (25): net10.0, coverlet.collector (6.0.4), MediatR (14.2.0), Microsoft.AspNetCore.Mvc.NewtonsoftJson (10.0.11), Microsoft.AspNetCore.OpenApi (10.0.11), Microsoft.EntityFrameworkCore.Design (10.0.11), Microsoft.EntityFrameworkCore.Sqlite (10.0.11), Microsoft.NET.Test.Sdk (17.14.0) (+17 more)
 
 ### Community 5 - "EventsHub.IntegrationTests README"
 Cohesion: 0.29
@@ -214,9 +216,9 @@ Nodes (17): ADDED Requirements, MODIFIED Requirements, Requirement: Destination 
 Cohesion: 0.67
 Nodes (3): Event Sourcing, Eventual Consistency, Projections and Read Model Rebuilding
 
-### Community 26 - "Vite Logo (SVG)"
-Cohesion: 0.67
-Nodes (3): Prefers-Color-Scheme Dark Mode Styling, Vite Logo (SVG), Vite Build Tool
+### Community 30 - "Handler"
+Cohesion: 0.24
+Nodes (8): 2. Public surface mirrors AutoMapper's subset in use, Context, Design, Goals / Non-Goals, Risks / Trade-offs, Why, EditEvent, Handler
 
 ### Community 36 - "Decisions"
 Cohesion: 0.14
@@ -224,15 +226,15 @@ Nodes (13): 1. A public `Mapper` built from profiles replaces `MapperRegistry`, 
 
 ### Community 37 - "MapperTests"
 Cohesion: 0.06
-Nodes (50): Mapper, Profile, Maps, Address, City, AddressCopy, City, AddressProfile (+42 more)
+Nodes (51): 3. Remove AutoMapper and document, Mapper, Profile, Maps, Address, City, AddressCopy, City (+43 more)
 
-### Community 38 - "AppDbContext"
-Cohesion: 0.20
-Nodes (4): AppDbContext, Events, GlobalTestSetup, AppDbContext
+### Community 38 - "MappingProfiles"
+Cohesion: 0.25
+Nodes (5): 1. Live in `EventsHub.Application/Core`, no new project, Migration Plan, MappingProfiles, Command, Event
 
 ### Community 39 - "TypeMap"
-Cohesion: 0.08
-Nodes (16): 1. Mapper core, 2. Documentation and end-to-end, Tasks, Workflow follow-up, IMappingExpression, IMemberOptions, MemberOptions, IsConfigured (+8 more)
+Cohesion: 0.09
+Nodes (15): 1. Mapper core, 2. Documentation and end-to-end, Workflow follow-up, IMappingExpression, IMemberOptions, MemberOptions, IsConfigured, Source (+7 more)
 
 ### Community 40 - "openspec-explore/SKILL.md"
 Cohesion: 0.17
@@ -242,8 +244,8 @@ Nodes (11): Check for context, Ending Discovery, Guardrails, Handling Different 
 Cohesion: 0.29
 Nodes (6): Anemic Domain / Leaky Abstractions / Over-Engineering, API Contracts and OpenAPI, Mapping and DTO Boundaries (AutoMapper/Mapster/manual), Rich Domain Model / Aggregates, EventsHub.Application README, Intended Application Layer Contents (use cases, DTOs, validation, interfaces)
 
-### Community 42 - "EventsController.cs"
-Cohesion: 0.19
+### Community 42 - "EventsHubBaseController"
+Cohesion: 0.20
 Nodes (4): EventsHub.Api.Controllers, EventsHubBaseController, Mediator, WeatherForecastController
 
 ### Community 43 - "explore.md"
@@ -259,8 +261,8 @@ Cohesion: 0.23
 Nodes (13): Generated Client Lands in src/src (nswag relative path), Current State and Known Inconsistencies, OpenAPI and Client Generation Pipeline, OpenAPI Host Does Not Register AppDbContext, OpenAPI Manual Setup Guide (OpenApi 1.md), Generation Pipeline (run host -> fetch JSON -> nswag run), EventsHub.nswag Codegen Config, NSwag Local Dotnet Tool (nswag.consolecore 14.7.1) (+5 more)
 
 ### Community 47 - "EventsHub.Application.Core.Mapping"
-Cohesion: 0.16
-Nodes (5): EventsHub.UnitTests.Core, EventsHub.Application.Core.Mapping, EventsHub.UnitTests.Events, EventsHub.UnitTests.Controllers, MapperServiceCollectionExtensions
+Cohesion: 0.20
+Nodes (4): EventsHub.UnitTests.Core, EventsHub.Application.Core.Mapping, EventsHub.UnitTests.Events, MapperServiceCollectionExtensions
 
 ### Community 48 - "EventsHub Web README"
 Cohesion: 0.29
@@ -271,12 +273,12 @@ Cohesion: 0.22
 Nodes (5): Git in Practice Guide, Merge, Cherry-pick and Squash, Pull Requests (gh CLI), EventsHub Root README, EventsHub.UnitTests README
 
 ### Community 50 - "IMapper"
-Cohesion: 0.06
-Nodes (35): 1. Live in `EventsHub.Application/Core`, no new project, 2. Public surface mirrors AutoMapper's subset in use, 3. Convention is member-name equality, resolved once at startup, 4. Immutable registry shared as a singleton, 5. Errors, 6. Extension point for future profiles, Context, Decisions (+27 more)
+Cohesion: 0.29
+Nodes (6): 1. Mapper core, 2. Switch call sites, Tasks, Workflow follow-up, What Changes, IMapper
 
-### Community 52 - "mediatr"
-Cohesion: 0.28
-Nodes (5): EventsHub.Application.Events.Commands, CreateEvent, Command, Id, DeleteEvent
+### Community 52 - "Proposal"
+Cohesion: 0.29
+Nodes (6): Capabilities, Impact, Modified Capabilities, New Capabilities, Proposal, What Changes
 
 ### Community 63 - "OrderCopy"
 Cohesion: 0.29
@@ -290,28 +292,36 @@ Nodes (6): eslint, @eslint/js, eslint-plugin-react-hooks, eslint-plugin-react-re
 Cohesion: 0.50
 Nodes (3): axios, dependencies, axios
 
+### Community 66 - "Proposal"
+Cohesion: 0.29
+Nodes (6): Capabilities, Impact, Modified Capabilities, New Capabilities, Proposal, Why
+
+### Community 67 - "Decisions"
+Cohesion: 0.40
+Nodes (5): 3. Convention is member-name equality, resolved once at startup, 4. Immutable registry shared as a singleton, 5. Errors, 6. Extension point for future profiles, Decisions
+
 ## Ambiguous Edges - Review These
 - `Events - Create- 200 (Bruno request)` → `Events - Get - 404 (Bruno request)`  [AMBIGUOUS]
   tests/EventsHub.IntegrationTests/Events/Events - Create- 200.yml · relation: semantically_similar_to
 
 ## Knowledge Gaps
-- **161 isolated node(s):** `Mediator`, `net10.0`, `Microsoft.AspNetCore.OpenApi (10.0.11)`, `Microsoft.EntityFrameworkCore.Design (10.0.11)`, `Microsoft.NET.Sdk.Web` (+156 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 379 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **155 isolated node(s):** `Maps`, `SourceType`, `DestinationType`, `ProfileType`, `SourceType` (+150 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 375 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **21 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Mapper` connect `MapperTests` to `IMapper`, `Decisions`, `TypeMap`, `EventsHub.Application.Core.Mapping`?**
-  _High betweenness centrality (0.039) - this node is a cross-community bridge._
+- **Why does `Profile` connect `MapperTests` to `Event`, `Task`, `Decisions`, `MappingProfiles`, `TypeMap`, `EventsHub.Application.Core.Mapping`, `IMapper`, `Proposal`, `Handler`?**
+  _High betweenness centrality (0.048) - this node is a cross-community bridge._
 - **Are the 26 inferred relationships involving `Mapper` (e.g. with `1. Mapper core` and `3. Remove AutoMapper and document`) actually correct?**
   _`Mapper` has 26 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `Mediator`, `net10.0`, `Microsoft.AspNetCore.OpenApi (10.0.11)` to the rest of the system?**
-  _161 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `Maps`, `SourceType`, `DestinationType` to the rest of the system?**
+  _155 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Event` be split into smaller, more focused modules?**
-  _Cohesion score 0.06196078431372549 - nodes in this community are weakly interconnected._
-- **Why does `Profile` connect `MapperTests` to `Event`, `IMapper`, `TypeMap`, `EventsHub.Application.Core.Mapping`?**
-  _High betweenness centrality (0.038) - this node is a cross-community bridge._
+  _Cohesion score 0.0519774011299435 - nodes in this community are weakly interconnected._
+- **Why does `MapperTests` connect `MapperTests` to `OrderCopy`, `EventsHub.Application.Core.Mapping`?**
+  _High betweenness centrality (0.045) - this node is a cross-community bridge._
 - **Are the 9 inferred relationships involving `Profile` (e.g. with `2. Public surface mirrors AutoMapper's subset in use` and `4. Immutable registry shared as a singleton`) actually correct?**
   _`Profile` has 9 INFERRED edges - model-reasoned connections that need verification._
 
