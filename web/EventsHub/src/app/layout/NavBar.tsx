@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 
 export default function NavBar() {
-  return (  
+  return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
         position="static"
@@ -49,9 +49,15 @@ export default function NavBar() {
                 color: "#E2E8F0",
               }}
             >
-              <MenuItem>Events</MenuItem>
-              <MenuItem>About</MenuItem>
-              <MenuItem>Contact</MenuItem>
+              <MenuItem sx={{ fontSize: "1.2rem", textTransform: "uppercase" }}>
+                Events
+              </MenuItem>
+              <MenuItem sx={{ fontSize: "1.2rem", textTransform: "uppercase" }}>
+                About
+              </MenuItem>
+              <MenuItem sx={{ fontSize: "1.2rem", textTransform: "uppercase" }}>
+                Contact
+              </MenuItem>
             </MenuList>
 
             <Button
