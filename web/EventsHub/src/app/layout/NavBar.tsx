@@ -50,7 +50,7 @@ export default function NavBar() {
               }}
             >
               <MenuItem sx={{ fontSize: "1.2rem", textTransform: "uppercase" }}>
-                Events
+                Activities
               </MenuItem>
               <MenuItem sx={{ fontSize: "1.2rem", textTransform: "uppercase" }}>
                 About
@@ -72,7 +72,7 @@ export default function NavBar() {
                 },
               }}
             >
-              Create Event
+              Create Activity
             </Button>
           </Toolbar>
         </Container>
